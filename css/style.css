@@ -9,6 +9,36 @@ body {
   color: var(--primary-text-color);
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* .page-header {
+  height: 80px;
+} */
+
+.page-header .head {
+  display: flex;
+  align-items: center;
+}
+
 .web-style {
   font-family: Raleway;
   font-size: 26px;
@@ -27,14 +57,15 @@ body {
   text-decoration: none;
 }
 
-.site-nav,
-.feature-list,
-.photos-list,
-.workers-list,
-.address-section,
-.buttons,
-.projects {
-  list-style: none;
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
 }
 .site-nav .link {
   font-weight: 500;
@@ -51,11 +82,17 @@ body {
 }
 
 .auth-nav {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
+  margin-left: auto;
+}
+
+.auth-nav .item + .item {
+  margin-left: 50px;
 }
 
 .auth-nav .email {
@@ -72,21 +109,48 @@ body {
   color: var(--accent-color);
 }
 
+.hero {
+  background: rgba(47, 48, 58, 1);
+  text-align: center;
+  padding: 200px 0;
+}
+
 .hero .title {
+  padding-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   color: var(--additional-color);
-  background-color: var(--litle-text-color);
 }
 
 .hero .link {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
+  letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--additional-color);
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 32px;
+  border-color: transparent;
+  border-radius: 4px;
+}
+
+.feature-list {
+  display: flex;
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
+.feature-list .item {
+  width: 270px;
+}
+
+.feature-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .feature-list .title {
@@ -105,11 +169,21 @@ body {
   letter-spacing: 0.03em;
 }
 
+.photos-list {
+  display: flex;
+}
+
+.photos-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .what-we-do .title {
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
   color: var(--litle-text-color);
 }
 
@@ -118,7 +192,32 @@ body {
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  text-align: center;
+  padding-top: 94px;
+  padding-bottom: 50px;
   color: var(--litle-text-color);
+}
+
+.team {
+  background-color: #f5f4fa;
+  margin-top: 94px;
+  padding-bottom: 94px;
+}
+
+.workers-list {
+  display: flex;
+  height: 368px;
+}
+
+.workers-list .item {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.workers-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .workers-list .title {
@@ -126,6 +225,9 @@ body {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
   color: var(--litle-text-color);
 }
 
@@ -134,11 +236,29 @@ body {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  text-align: center;
+  margin: 0;
 }
 
 .end-page {
-  background-color: var(--litle-text-color);
+  background-color: #2f303a;
+  height: 252px;
 }
+
+.address-section {
+  display: block;
+  padding-top: 20px;
+}
+.end-page .web-style {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.address-section .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .address-section .link {
   font-weight: 400;
   font-size: 14px;
